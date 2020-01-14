@@ -16,8 +16,8 @@ variable "subnet_ids" {
   type        = list(string)
 }
 
-variable "security_groups_cidr" {
-  description = "Security groups CIDR for Mount Targets"
+variable "ingress_cidr_blocks" {
+  description = "Ingress CIDR blocks for Mount Targets"
   type        = list(string)
   default     = []
 }
