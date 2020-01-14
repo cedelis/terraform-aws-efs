@@ -16,8 +16,15 @@ variable "subnet_ids" {
   type        = list(string)
 }
 
+variable "security_groups_cidr" {
+  description = "Security groups CIDR for Mount Targets"
+  type        = list(string)
+  default     = []
+}
+
 variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)
   default     = {}
 }
+

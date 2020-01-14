@@ -10,6 +10,7 @@ resource "aws_security_group" "this" {
     from_port = 2049
     protocol  = "tcp"
     to_port   = 2049
+    security_groups = var.security_groups_cidr
     self      = true
   }
   egress {
