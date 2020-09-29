@@ -57,3 +57,16 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "encrypted" {
+  type        = bool
+  description = "If true, the file system will be encrypted"
+  default     = false
+}
+
+variable "kms_key_id" {
+  type        = string
+  description = "If set, use a specific KMS key"
+  default     = null
+}
+
